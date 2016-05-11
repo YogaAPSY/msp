@@ -1,7 +1,5 @@
 <?php
 	include("conect.php");
-	echo "kontol";
-	exit;
 	session_start();
 
 	if(isset($_POST['nim']) && isset($_POST['password']))
@@ -14,7 +12,6 @@
 			while ($row = mysqli_fetch_array($sql)) {
 				$_SESSION['nim'] = $row["Nim"];
 				$_SESSION['nama'] = $row['Nama'];
-				echo "masuk sini";
 				header("Location: article.php");
 
 				exit;
