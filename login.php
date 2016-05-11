@@ -12,7 +12,9 @@
 			while ($row = mysqli_fetch_array($sql)) {
 				$_SESSION['nim'] = $row["Nim"];
 				$_SESSION['nama'] = $row['Nama'];
+				echo "masuk sini";
 				header("Location: article.php");
+
 				exit;
 				}
 		}
