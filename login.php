@@ -1,5 +1,7 @@
 <?php
 	include("conect.php");
+	echo "kontol";
+	exit;
 	session_start();
 
 	if(isset($_POST['nim']) && isset($_POST['password']))
