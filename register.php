@@ -1,6 +1,5 @@
 <?php
 	include("conect.php");
-	echo"Ssda";
 	session_start();
 
 	if(isset($_POST['submit_value']))
@@ -47,5 +46,7 @@
       $error = '<div class"alert alert-danger">Ukuran gambar terlalu besar</div>';
     }
     }
+	}else{
+		echo"ganteng";
 	}
 ?>
