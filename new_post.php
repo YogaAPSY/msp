@@ -1,8 +1,8 @@
 <?php
+  session_start();
 	include("header.php");
 	include("conect.php");
-  session_start();
-
+	
 if(isset($_POST['submit_post'])){
     
     $title = strip_tags($_POST['title']);
