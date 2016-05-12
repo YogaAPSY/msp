@@ -1,8 +1,6 @@
 <?php
 	include("conect.php");
 	session_start();
-	
-
 
 	if(isset($_POST['submit_value']))
 	{
