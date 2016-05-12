@@ -20,11 +20,11 @@
 		else{
 			$_SESSION['salah_password'] = true;
 			header("Location: index.php");
-		exit;
+		exit();
 		}
 	}
 	else {
 		header("Location: index.php");
-		exit;
+		exit();
 		}
 ?>
