@@ -1,6 +1,6 @@
 <?php
-	include("conect.php");
 	session_start();
+	include("conect.php");
 
 	if(isset($_POST['nim']) && isset($_POST['password']))
 	{	
@@ -8,11 +8,11 @@
 		$password1 = $_POST['password'];
 		$sql = mysqli_query($koneksi,"SELECT * FROM data_mahasiswa WHERE Nim = '$nim1' and Password = '".md5($password1)."'");
 		
-		if (mysqli_num_rows($sql) === 1) {echo 
+		if (mysqli_num_rows($sql) === 1) { 
 			while ($row = mysqli_fetch_array($sql)) { 
 				$_SESSION['nim'] = $row["Nim"];
 				$_SESSION['nama'] = $row['Nama'];
-				echo $_SESSION['nama'];
+			
 				header("Location: article.php");
 				exit();
 				}
