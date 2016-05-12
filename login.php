@@ -1,5 +1,5 @@
 <?php
-	include("conect.php")
+	include("conect.php");
 	session_start();
 
 	if(isset($_POST['nim']) && isset($_POST['password']))
