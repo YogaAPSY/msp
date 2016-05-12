@@ -1,9 +1,11 @@
 <?php
 	include("conect.php");
+	echo "Username: " . $_POST['username'] . "<br/>";
+	echo "Password: " . $_POST['password'] . "<br/>";
 	session_start();
 
 	if(isset($_POST['nim']) && isset($_POST['password']))
-	{	echo $_POST['nim']"1";
+	{	echo $_POST['nim']."1";
 		$nim1 = $_POST['nim'];
 		$password1 = $_POST['password'];
 		$sql = mysqli_query($koneksi,"SELECT * FROM data_mahasiswa WHERE Nim = '$nim1' and Password = '".md5($password1)."'") or die (mysqli_error());
