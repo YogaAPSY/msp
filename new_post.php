@@ -1,5 +1,6 @@
 <?php
-  session_start();
+
+  	session_start();
 	include("header.php");
 	include("conect.php");
 	
@@ -28,7 +29,8 @@ if(isset($_POST['submit_post'])){
           VALUES('$title', '$description', '$image_db_path', '$category' , '$status' ,'$date' , '$author')";
           if(mysqli_query($koneksi,$ins_sql)){
             $_SESSION['new_post'] = true;
-            header('post_list.php');
+            
+            header("Location: post_list.php");
           }else{
             $error = die(mysql_error());
           }
