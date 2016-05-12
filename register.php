@@ -30,6 +30,7 @@
 			if(mysqli_query($koneksi,$ins_sql)){
 			$_SESSION['terdaftar'] = true;
 			header("Location: index.php");
+			exit();
 		}else{
             $error = die(mysql_error());
 		}
@@ -46,7 +47,5 @@
       $error = '<div class"alert alert-danger">Ukuran gambar terlalu besar</div>';
     }
     }
-	}else{
-		echo"ganteng";
 	}
 ?>

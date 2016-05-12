@@ -14,8 +14,7 @@
 				$_SESSION['nama'] = $row['Nama'];
 				echo $_SESSION['nama'];
 				header("Location: article.php");
-
-				exit;
+				exit();
 				}
 		}
 		else{
