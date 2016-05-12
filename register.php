@@ -1,6 +1,6 @@
 <?php
-	include("conect.php");
 	session_start();
+	include("conect.php");
 
 	if(isset($_POST['submit_value']))
 	{
